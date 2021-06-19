@@ -203,8 +203,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/security/sec_config:$(TARGET_COPY_OUT_VENDOR)/etc/sec_config
 
 # Lights
-PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.xiaomi_sm6150
+#PRODUCT_PACKAGES += \
+#    android.hardware.light@2.0-service.xiaomi_sm6150
 
 # Media
 PRODUCT_PACKAGES += \
@@ -305,10 +305,13 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.stepcounter.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.stepcounter.xml \
     frameworks/native/data/etc/android.hardware.sensor.stepdetector.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.stepdetector.xml
 
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
-    hardware/xiaomi
+    hardware/xiaomi \
+    vendor/qcom/opensource/commonsys/packages/apps/Bluetooth \
+    vendor/qcom/opensource/commonsys/system/bt/conf \
 
 # Telephony
 PRODUCT_PACKAGES += \
